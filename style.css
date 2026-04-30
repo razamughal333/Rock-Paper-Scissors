@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  background-color: #ff5c04;
+  color: #0c457d;
+  align-items: center;
+  position: relative;
+}
+.nav h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.logo {
+  margin-left: 1rem;
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: "Syne", sans-serif;
+  letter-spacing: -0.35rem;
+}
+
+body main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6bd2db;
+}
+.game {
+  display: flex;
+  flex-direction: column;
+  margin-top: -10rem;
+  align-items: center;
+}
+.choices {
+  display: flex;
+  height: 100%;
+}
+.choice {
+  display: flex;
+  height: 7rem;
+  width: 7rem;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
+  font-size: 3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffbe4f;
+  color: #0c457d;
+  cursor: pointer;
+}
+
+.choice:hover {
+  background-color: #ffbe4f;
+  color: #0c457d;
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+
+#rock {
+  background-color: #04ffc9;
+}
+#paper {
+  background-color: #04ffa3;
+}
+#scissors {
+  background-color: #b04fff;
+  color: #fffad6;
+}
+.score {
+  margin-top: 5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0c457d;
+}
+
+#player-score {
+  color: #ff5c04;
+}
+#computer-score {
+  color: #ff5c04;
+}
+.choice-instruction {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  background-color: #ffbe4f;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.result {
+  font-size: 1.5rem;
+  font-weight: bold;
+}

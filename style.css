@@ -70,19 +70,18 @@ body main {
   background-color: #04ffa3;
 }
 #scissors {
-  background-color: #b04fff;
+  background-color: #01775f;
   color: #fffad6;
 }
 .score {
   margin-top: 5rem;
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: bold;
   color: #0c457d;
 }
 
-#player-score {
-  color: #ff5c04;
-}
+#player-score,
+#draw-score,
 #computer-score {
   color: #ff5c04;
 }

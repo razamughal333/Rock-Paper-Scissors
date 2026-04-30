@@ -1,8 +1,5 @@
-let choices = document.querySelectorAll(".choice");
-let resultMessage = document.querySelector("#result-message");
 let playerScoreEl = document.querySelector("#player-score");
 let computerScoreEl = document.querySelector("#computer-score");
-let instruction = document.querySelector(".choice-instruction");
 
 let playerScore = 0;
 let computerScore = 0;
@@ -26,6 +23,10 @@ function getResult(player, computer) {
 
   return "lose";
 }
+
+let choices = document.querySelectorAll(".choice");
+let resultMessage = document.querySelector("#result-message");
+let instruction = document.querySelector(".choice-instruction");
 
 choices.forEach((button) => {
   button.addEventListener("click", () => {

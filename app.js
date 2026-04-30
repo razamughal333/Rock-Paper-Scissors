@@ -10,7 +10,7 @@ function getComputerChoice() {
   let randomIndex = Math.floor(Math.random() * 3);
   return computerOptions[randomIndex];
 }
-
+// Logic to determine the winner
 function getResult(player, computer) {
   if (player === computer) return "draw";
 
@@ -20,9 +20,9 @@ function getResult(player, computer) {
     (player === "scissors" && computer === "paper")
   ) {
     return "win";
+  } else {
+    return "lose";
   }
-
-  return "lose";
 }
 
 let choices = document.querySelectorAll(".choice");
@@ -31,30 +31,30 @@ let instruction = document.querySelector(".choice-instruction");
 
 choices.forEach((button) => {
   button.addEventListener("click", () => {
-    let playerChoice = button.id;
+    let playerChoice = button.id; //get id attribute of the button clicked
     let computerChoice = getComputerChoice();
-    let outcome = getResult(playerChoice, computerChoice);
+    let result = getResult(playerChoice, computerChoice); //get result of the round and decide what to do
 
-    if (outcome === "win") {
+    if (result === "win") {
       playerScore++;
-      playerScoreEl.textContent = playerScore;
-      resultMessage.textContent = `Your ${playerChoice}, beats ${computerChoice} — You Win!`;
+      playerScoreEl.innerText = playerScore;
+      resultMessage.innerText = `Your ${playerChoice}, beats ${computerChoice} — You Win!`;
       resultMessage.style.color = "#51ff00";
       resultMessage.style.backgroundColor = "#000000";
       resultMessage.style.borderRadius = "5px";
       resultMessage.style.padding = "2px";
-    } else if (outcome === "lose") {
+    } else if (result === "lose") {
       computerScore++;
-      computerScoreEl.textContent = computerScore;
-      resultMessage.textContent = `${computerChoice} beats your ${playerChoice} — You Lose!`;
+      computerScoreEl.innerText = computerScore;
+      resultMessage.innerText = `${computerChoice} beats your ${playerChoice} — You Lose!`;
       resultMessage.style.color = "#d12929";
       resultMessage.style.backgroundColor = "#ffebeb";
       resultMessage.style.borderRadius = "5px";
       resultMessage.style.padding = "2px";
     } else {
       drawScore++;
-      drawScoreEl.textContent = drawScore;
-      resultMessage.textContent = `You both picked ${playerChoice} — It's a Draw!`;
+      drawScoreEl.innerText = drawScore;
+      resultMessage.innerText = `You both picked ${playerChoice} — It's a Draw!`;
       resultMessage.style.color = "#0c457d";
       resultMessage.style.backgroundColor = "#e97509";
       resultMessage.style.borderRadius = "5px";

@@ -12,7 +12,9 @@ function getComputerChoice() {
 }
 // Logic to determine the winner
 function getResult(player, computer) {
-  if (player === computer) return "draw";
+  if (player === computer) {
+    return "draw";
+  }
 
   if (
     (player === "rock" && computer === "scissors") ||
@@ -27,7 +29,7 @@ function getResult(player, computer) {
 
 let choices = document.querySelectorAll(".choice");
 let resultMessage = document.querySelector("#result-message"); //El to display result
-let instruction = document.querySelector(".choice-instruction");
+let instruction = document.querySelector(".instruction");
 
 choices.forEach((button) => {
   button.addEventListener("click", () => {
